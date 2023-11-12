@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 BREW_PREFIX=${BREW_PREFIX:-"/home/linuxbrew/.linuxbrew"}
-SHALLOW_CLONE=${SHALLOW_CLONE:-"false"}
 USERNAME=${USERNAME:-"automatic"}
 
 ARCHITECTURE="$(uname -m)"
@@ -120,19 +119,7 @@ check_packages \
 # Install Homebrew
 mkdir -p "${BREW_PREFIX}"
 echo "Installing Homebrew..."
-if [ "${SHALLOW_CLONE}" = "false" ]; then
-  git clone https://github.com/Homebrew/brew "${BREW_PREFIX}/Homebrew"
-  mkdir -p "${BREW_PREFIX}/Homebrew/Library/Taps/homebrew"
-  git clone https://github.com/Homebrew/homebrew-core "${BREW_PREFIX}/Homebrew/Library/Taps/homebrew/homebrew-core"
-else
-  echo "Using shallow clone..."
-  git clone --depth 1 https://github.com/Homebrew/brew "${BREW_PREFIX}/Homebrew"
-  mkdir -p "${BREW_PREFIX}/Homebrew/Library/Taps/homebrew"
-  git clone --depth 1 https://github.com/Homebrew/homebrew-core "${BREW_PREFIX}/Homebrew/Library/Taps/homebrew/homebrew-core"
-  # Disable automatic updates as they are not allowed with shallow clone installation
-  updaterc "export HOMEBREW_NO_AUTO_UPDATE=1"
-  updatefishconfig "set -gx HOMEBREW_NO_AUTO_UPDATE 1"
-fi
+git clone https://github.com/Homebrew/brew "${BREW_PREFIX}/Homebrew"
 "${BREW_PREFIX}/Homebrew/bin/brew" config
 mkdir "${BREW_PREFIX}/bin"
 ln -s "${BREW_PREFIX}/Homebrew/bin/brew" "${BREW_PREFIX}/bin"
