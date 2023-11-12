@@ -1,5 +1,4 @@
 
-
 # Homebrew (homebrew)
 
 Installs Homebrew
@@ -8,7 +7,7 @@ Installs Homebrew
 
 ```json
 "features": {
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
+    "ghcr.io/MarkIannucci/devcontainer-features/homebrew:2": {}
 }
 ```
 
@@ -22,4 +21,4 @@ Installs Homebrew
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/meaningful-ooo/devcontainer-features/blob/main/src/homebrew/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/MarkIannucci/devcontainer-features/blob/main/src/homebrew/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
