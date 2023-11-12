@@ -1,5 +1,4 @@
 
-
 # fish (fish)
 
 Installs fish shell and Fisher plugin manager (optionally)
@@ -8,7 +7,7 @@ Installs fish shell and Fisher plugin manager (optionally)
 
 ```json
 "features": {
-    "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+    "ghcr.io/MarkIannucci/devcontainer-features/fish:1": {}
 }
 ```
 
@@ -22,4 +21,4 @@ Installs fish shell and Fisher plugin manager (optionally)
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/meaningful-ooo/devcontainer-features/blob/main/src/fish/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/MarkIannucci/devcontainer-features/blob/main/src/fish/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
